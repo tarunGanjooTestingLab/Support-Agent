@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SupportAgentMcpServerApplication<supportAgentMcpServer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.supportAgentMcpServer.SupportAgentMcpServerApplication",
+            "projectName": "supportAgentMcpServer",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SupportAgentMcpClientApplication<supportAgentMcpClient>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.supportAgentMcpClient.SupportAgentMcpClientApplication",
+            "projectName": "supportAgentMcpClient",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

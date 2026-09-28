@@ -1,0 +1,24 @@
+package com.supportAgentMcpClient.config;
+
+import com.supportAgentMcpClient.model.IncomingEmail;
+
+/**
+ * Strategy for reacting to a newly discovered email.
+ * <p>
+ * The {InboxMonitor} only knows how to find new mail; deciding
+ * what to do with it (classify, draft a reply, open a ticket, hand it
+ * to an LLM, ...) is delegated here. Provide your own {@Component}
+ * implementation to plug the agent's behaviour in.
+ */
+@FunctionalInterface
+public interface EmailHandler {
+
+    /**
+     * Handle a single new email.
+     *
+     * @return {@code true} if the email was processed successfully and may be
+     *         marked as read; {@code false} to leave it unread for a retry on
+     *         the next poll.
+     */
+    boolean handle(IncomingEmail email);
+}
